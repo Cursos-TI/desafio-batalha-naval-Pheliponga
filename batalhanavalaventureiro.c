@@ -10,28 +10,29 @@ int main() {
     int matriz [LINHAS][COLUNAS]; //As dimensões da matriz foram definidas anteriormentes.
     int soma = 0;
 
-    char cabecalho [ABC];
-    char letra = '@';
+    char cabecalho [ABC]; // Cabeçalho da MATRIZ (A a J), represantado na horizontal.
+    char letra = 'A';
 
-    int lateral [NUMEROS];
-    int numeral = 0;
+    int lateral [NUMEROS]; // Cabeçalho da MATRIZ (1 a 10), representado na vertical.
+    int numeral = 1;
 
     printf("TABULEIRO BATALHA NAVAL \n\n");
     
-    for (int k = 0; k < 10; k++){
+    for (int k = 0; k < ABC; k++){
 
-        letra ++;
         cabecalho[k] = letra;
+        letra ++;
 
-        printf(" %c", cabecalho[k]);
+        printf(" %2c", cabecalho[k]);
     }
     
     printf("\n");
 
-     for (int i, l = 0; i, l < 10; i++, l++){
-        
-        for(int j = 0; j < 10; j++){
-          
+    for (int i = 0; i < LINHAS; i++){
+        printf("%2d ", numeral);
+        numeral++;
+        for(int j = 0; j < COLUNAS; j++){
+
             matriz[i][j] = soma; // Inserção de valores na matriz 10x10.
 
             matriz[7][3] = 3; // Navio horizontal;
@@ -50,7 +51,8 @@ int main() {
             matriz[3][7] = 3; // Navio diagonal direita;
             matriz[4][6] = 3; // Navio diagonal direita;
 
-            printf("%d ", matriz[i][j]);
+            
+            printf("%2d ", matriz[i][j]);
         } 
         printf("\n");
     }
