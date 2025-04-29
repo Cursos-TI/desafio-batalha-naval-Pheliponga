@@ -35,9 +35,53 @@ int main() {
     for (int i = 0; i < LINHAS; i++){
         for(int j = 0; j < COLUNAS; j++){
 
-            matriz[7][3] = 3; // Navio horizontal;
-            matriz[7][4] = 3; // Navio horizontal;
-            matriz[7][5] = 3; // Navio horizontal;
+            matriz[0][7] = 4; // CONE
+            matriz[1][6] = 4; matriz[1][7] = 4; matriz[1][8] = 4;
+            matriz[2][5] = 4; matriz[2][6] = 4; matriz[2][7] = 4; matriz[2][8] = 4; matriz[2][9] = 4;    
+        }
+    }
+
+    for (int i = 0; i < LINHAS; i++){
+        for(int j = 0; j < COLUNAS; j++){
+
+            matriz[3][2] = 5; // CRUZ
+            matriz[4][0] = 5; matriz[4][1] = 5; matriz[4][2] = 5; matriz[4][3] = 5; matriz[4][4] = 5;
+            matriz[5][2] = 5;
+        }
+    }
+
+    for (int i = 0; i < LINHAS; i++){
+        for(int j = 0; j < COLUNAS; j++){
+
+            matriz[7][5] = 6; // OCTAEDRO
+            matriz[8][4] = 6; matriz[8][5] = 6; matriz[8][6] = 6;
+            matriz[9][5] = 6;
+        }
+    }
+
+    for (int i = 0; i < LINHAS; i++){
+        for(int j = 0; j < COLUNAS; j++){
+            if (matriz[7][3] = 6){
+
+                matriz[7][3] = 1;
+
+            } else {
+                matriz[7][3] = 3;
+
+            } if (matriz[7][4] = 6){
+                
+                matriz[7][4] = 1;
+            } else {
+
+                matriz[7][4] = 3;
+
+            } if (matriz[7][5] = 6){
+
+                matriz[7][5] = 1;
+            } else {
+
+                matriz[7][5] = 3;
+            }
         }
     }
 
@@ -60,36 +104,9 @@ int main() {
             matriz[2][8] = 3; // Navio diagonal direita;
             matriz[3][7] = 3; // Navio diagonal direita;
             matriz[4][6] = 3; // Navio diagonal direita;
+
+            printf(" %2d", matriz[i][j]);
         } 
-    }
-
-    for (int i = 0; i < LINHAS; i++){
-        for(int j = 0; j < COLUNAS; j++){
-
-            matriz[0][7] = 4; // CONE
-            matriz[1][6] = 4; matriz[1][7] = 4; matriz[1][8] = 4;
-            matriz[2][5] = 4; matriz[2][6] = 4; matriz[2][7] = 4; matriz[2][8] = 4; matriz[2][9] = 4;
-        }
-    }
-
-    for (int i = 0; i < LINHAS; i++){
-        for(int j = 0; j < COLUNAS; j++){
-
-            matriz[3][2] = 5; // CRUZ
-            matriz[4][0] = 5; matriz[4][1] = 5; matriz[4][2] = 5; matriz[4][3] = 5; matriz[4][4] = 5;
-            matriz[5][2] = 5;
-        }
-    }
-
-    for (int i = 0; i < LINHAS; i++){
-        for(int j = 0; j < COLUNAS; j++){
-
-            matriz[7][5] = 6; // OCTAEDRO
-            matriz[8][4] = 6; matriz[8][5] = 6; matriz[8][6] = 6;
-            matriz[9][5] = 6;
-
-           printf(" %2d", matriz[i][j]);
-        }
         printf("\n");
     }
     
