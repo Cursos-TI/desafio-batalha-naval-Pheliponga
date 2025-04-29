@@ -61,56 +61,92 @@ int main() {
 
     for (int i = 0; i < LINHAS; i++){
         for(int j = 0; j < COLUNAS; j++){
-            if (matriz[7][3] = 6){
-
-                matriz[7][3] = 1;
-
+            if (matriz[7][3] != 0){
+                matriz[7][3] = 1; // Navio horizontal
             } else {
                 matriz[7][3] = 3;
-
-            } if (matriz[7][4] = 6){
-                
-                matriz[7][4] = 1;
+            } 
+            if (matriz[7][4] != 0){
+                matriz[7][4] = 1; // Navio horizontal
             } else {
-
                 matriz[7][4] = 3;
-
-            } if (matriz[7][5] = 6){
-
-                matriz[7][5] = 1;
+            } 
+            if (matriz[7][5] != 0){
+                matriz[7][5] = 1; // Navio horizontal
             } else {
-
                 matriz[7][5] = 3;
             }
+            break;
         }
+        break;
     }
 
     for (int i = 0; i < LINHAS; i++){
         for(int j = 0; j < COLUNAS; j++){
-
-            matriz[2][1] = 3; // Navio vertical;
-            matriz[3][1] = 3; // Navio vertical;
-            matriz[4][1] = 3; // Navio vertical;
+            if (matriz[2][1] != 0){
+                matriz[2][1] = 1; // Navio vertical;
+            } else{
+                matriz[2][1] = 3;
+            }
+            if (matriz[3][1] != 0){
+                matriz[3][1] = 1; // Navio vertical;
+            } else{
+                matriz[3][1] = 3; 
+            }
+            if (matriz[4][1] != 0){
+                matriz[4][1] = 1; // Navio vertical;
+            } else{
+                matriz[4][1] = 3;
+            }
+            break;
         }
+        break;
     }
 
     for (int i = 0; i < LINHAS; i++){
         for(int j = 0; j < COLUNAS; j++){
+            if (matriz[2][2] != 0){
+                matriz[2][2] = 1; // Navio diagonal esquerda;
+            } else{
+                matriz[2][2] = 3;
+            }
+            if (matriz[3][3] != 0){
+                matriz[3][3] = 1; // Navio diagonal esquerda;
+            } else{
+                matriz[3][3] = 3;
+            }
+            if (matriz[4][4] != 0){
+                matriz[4][4] = 1; // Navio diagonal esquerda;
+            } else{
+                matriz[4][4] = 3;
+            }
 
-            matriz[2][2] = 3; // Navio diagonal esquerda;
-            matriz[3][3] = 3; // Navio diagonal esquerda;
-            matriz[4][4] = 3; // Navio diagonal esquerda;
-
-            matriz[2][8] = 3; // Navio diagonal direita;
-            matriz[3][7] = 3; // Navio diagonal direita;
-            matriz[4][6] = 3; // Navio diagonal direita;
-
-            printf(" %2d", matriz[i][j]);
+            if (matriz[2][8] != 0){
+                matriz[2][8] = 1; // Navio diagonal direita;
+            } else{
+                matriz[2][8] = 3;
+            }
+            if (matriz[3][7] != 0){
+                matriz[3][7] = 1; // Navio diagonal direita;
+            } else{
+                matriz[3][7] = 3;
+            }
+            if (matriz[4][6] != 0){
+                matriz[4][6] = 1; // Navio diagonal direita;
+            } else{
+                matriz[4][6] = 3;
+            }
+            break;
         } 
-        printf("\n");
+        break;
     }
     
-
+    for (int i = 0; i < LINHAS; i++){
+        for(int j = 0; j < COLUNAS; j++){
+            printf(" %2d", matriz[i][j]);
+        }
+        printf("\n");
+    }
 
  /* CONE = 4;
     CRUZ = 5;
