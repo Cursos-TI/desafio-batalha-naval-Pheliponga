@@ -12,6 +12,8 @@ int main() {
     char cabecalho [ABC]; // Cabeçalho da MATRIZ (A a J), represantado na horizontal.
     char letra = 'A';
 
+    int numeral = 1; // inteiro declarado com o valor igual a 1. Será utilizado para incrementar 10 vezes.
+
     printf("     TABULEIRO BATALHA NAVAL \n\n");
     
     for (int k = 0; k < ABC; k++){
@@ -142,8 +144,10 @@ int main() {
     }
     
     for (int i = 0; i < LINHAS; i++){
+        printf("%2d", numeral); // exibição do numeral da coluna vertical.
+        numeral++; // incrementação do numeral da coluna
         for(int j = 0; j < COLUNAS; j++){
-            printf(" %2d", matriz[i][j]);
+            printf(" %2d", matriz[i][j]); // exibição da matriz.
         }
         printf("\n");
     }
